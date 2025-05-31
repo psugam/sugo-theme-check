@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ .Content }}
+  <div>
+  {{ range where site.RegularPages "Section" "posts" }}
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h3 style="margin: 0;"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+      <p style="margin: 0; color: inherit; font-size: 1rem;">{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}{{ $dateHuman := .Date | time.Format ":date_long" }}<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+    </div>
+    <!-- {{ .Summary }} -->
+  {{ end }}
+  </div>
+{{ end }}

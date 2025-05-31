@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range where .Pages "Section" "posts" }}
+    <div style="margin-bottom: 2rem;">
+      <h2 style="margin: 0;"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <div class="post-meta" style="margin: 0.25rem 0 0.75rem 0;">
+        <span>
+          {{ $authors := .Params.authors }}
+          {{ if $authors }}
+            {{ range $i, $author := $authors }}
+              {{ if $i }}<span class="interpunct">·</span>{{ end }}<a class="author-badge" href="/authors/{{ $author | urlize }}/">{{ $author }}</a>
+            {{ end }}
+          {{ end }}
+        </span>
+        <span>
+          {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $dateHuman := .Date | time.Format ":date_long" }}
+          <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        </span>
+      </div>
+      <p style="margin: 0;">
+        {{ $words := (split (plainify .Content) " ") }}
+        {{ $first100 := (delimit (first 100 $words) " ") }}
+        {{ $first100 }}{{ if gt (len $words) 100 }}...{{ end }}
+        <a href="{{ .RelPermalink }}">Read more</a>
+      </p>
+    </div>
+  {{ end }}
+{{ end }}
