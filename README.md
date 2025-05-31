@@ -1,4 +1,5 @@
 ﻿# sugo-theme-check
+ Sugo is a minimal hugo theme for personal blogs. 
 ## Steps for Using Sugo
 1. Create a new hugo site ```new hugo site <sitename>```
 2. Go to the themes folder ```cd themes```
