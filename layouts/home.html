@@ -1,12 +1,23 @@
 {{ define "main" }}
   {{ .Content }}
+  {{ $paginator := .Paginate (where site.RegularPages "Section" "posts") 5 }}
   <div>
-  {{ range where site.RegularPages "Section" "posts" }}
-    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem;">
-      <h3 style="margin: 0;"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-      <p style="margin: 0; color: inherit; font-size: 1rem;">{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}{{ $dateHuman := .Date | time.Format ":date_long" }}<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
-    </div>
-    <!-- {{ .Summary }} -->
-  {{ end }}
+    {{ range $paginator.Pages }}
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem;">
+        <h3 style="margin: 0;"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+        <p style="margin: 0; color: inherit; font-size: 1rem;">{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}{{ $dateHuman := .Date | time.Format ":date_long" }}<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></p>
+      </div>
+      <!-- {{ .Summary }} -->
+    {{ end }}
+  </div>
+  <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+    {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}" style="font-weight: bold;">&larr; Previous</a>
+    {{ else }}
+      <span></span>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}" style="font-weight: bold;">Next &rarr;</a>
+    {{ end }}
   </div>
 {{ end }}

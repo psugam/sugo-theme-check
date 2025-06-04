@@ -332,3 +332,9 @@ h6::after {
 .tag-link-animated:hover::after {
   transform: scaleX(1);
 }
+
+
+.toc {
+  all:unset;
+}
+

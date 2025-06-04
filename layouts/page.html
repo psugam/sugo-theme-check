@@ -36,6 +36,12 @@
       </span>
     </div>
   {{ end }}
+  {{ if .TableOfContents }}
+    <div class="toc" id="toc-container">
+      <h2 id="toc-title">Table of Contents</h2>
+      {{ .TableOfContents }}
+    </div>
+  {{ end }}
 
   <div id="post-content-wrapper">
     <div id="post-main-content">
@@ -58,3 +64,4 @@
     </div>
   {{ end }}
 {{ end }}
+

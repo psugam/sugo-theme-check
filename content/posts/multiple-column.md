@@ -4,6 +4,7 @@ draft = false
 title = 'Multiple Column'
 authors=['Sugam']
 tags=['red', 'white', 'blue']
+toc=true
 +++
 {{< columns >}}
 ### Column 1 content in Markdown
@@ -33,6 +34,21 @@ Adipisicing ad pariatur laboris ea consequat sint. Dolor magna excepteur eu labo
 Cillum ad excepteur sit Lorem amet. Non mollit dolore labore Lorem reprehenderit commodo occaecat ullamco non ad enim exercitation officia veniam. Aliquip mollit nostrud adipisicing minim. Consequat fugiat ex nostrud veniam nostrud do fugiat. Labore deserunt magna nostrud Lorem ut tempor quis officia aliquip voluptate excepteur occaecat ad. Voluptate adipisicing quis ullamco aute laboris irure id. Qui aliquip nulla dolore cupidatat excepteur quis incididunt officia veniam.
 
 Occaecat nostrud fugiat labore in nostrud et est in. Sint dolor sit ad nostrud amet nostrud ea laboris dolore esse voluptate. Enim mollit amet irure sit. Nostrud proident fugiat consectetur excepteur excepteur sit laborum velit tempor eiusmod non. Incididunt deserunt qui ipsum duis magna sint.
+
+Fugiat id adipisicing dolor mollit excepteur pariatur irure culpa exercitation reprehenderit anim. Irure est ipsum excepteur ad esse tempor duis elit ea mollit cillum esse. Consequat do eu sunt nulla est commodo est velit Lorem ipsum. Commodo ullamco in qui elit ad anim sit. Id proident mollit tempor exercitation aliquip consectetur anim. Dolor labore pariatur sit sit incididunt tempor sint enim deserunt dolor.
+
+Consectetur non labore incididunt quis laborum. Anim elit exercitation ea elit reprehenderit anim Lorem. Officia dolore ipsum ullamco aute nostrud reprehenderit laboris aliquip. Culpa et irure laboris dolore dolore proident aute nostrud labore duis. Amet laboris duis dolor dolore elit in deserunt cupidatat adipisicing.
+{{< /columns >}}
+
+
+{{< columns >}}
+### Column 1 
+
+Fugiat id adipisicing dolor mollit excepteur pariatur irure culpa exercitation reprehenderit anim. Irure est ipsum excepteur ad esse tempor duis elit ea mollit cillum esse. Consequat do eu sunt nulla est commodo est velit Lorem ipsum. Commodo ullamco in qui elit ad anim sit. Id proident mollit tempor exercitation aliquip consectetur anim. Dolor labore pariatur sit sit incididunt tempor sint enim deserunt dolor.
+
+Consectetur non labore incididunt quis laborum. Anim elit exercitation ea elit reprehenderit anim Lorem. Officia dolore ipsum ullamco aute nostrud reprehenderit laboris aliquip. Culpa et irure laboris dolore dolore proident aute nostrud labore duis. Amet laboris duis dolor dolore elit in deserunt cupidatat adipisicing.
+<!--col-->
+### Column 2
 
 Fugiat id adipisicing dolor mollit excepteur pariatur irure culpa exercitation reprehenderit anim. Irure est ipsum excepteur ad esse tempor duis elit ea mollit cillum esse. Consequat do eu sunt nulla est commodo est velit Lorem ipsum. Commodo ullamco in qui elit ad anim sit. Id proident mollit tempor exercitation aliquip consectetur anim. Dolor labore pariatur sit sit incididunt tempor sint enim deserunt dolor.
 
