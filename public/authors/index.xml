@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on My New Hugo Site</title>
+    <link>http://localhost:1313/authors/</link>
+    <description>Recent content in Authors on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 04 Jun 2025 18:07:33 +0545</lastBuildDate>
+    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sugam</title>
+      <link>http://localhost:1313/authors/sugam/</link>
+      <pubDate>Wed, 04 Jun 2025 18:07:33 +0545</pubDate>
+      <guid>http://localhost:1313/authors/sugam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Alice</title>
+      <link>http://localhost:1313/authors/alice/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/authors/alice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bob</title>
+      <link>http://localhost:1313/authors/bob/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/authors/bob/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Carol</title>
+      <link>http://localhost:1313/authors/carol/</link>
+      <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/authors/carol/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

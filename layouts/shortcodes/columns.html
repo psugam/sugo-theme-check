@@ -1,0 +1,8 @@
+<div class="columns" style="display: flex; gap: 1.5rem;">
+  {{- $cols := split .Inner "<!--col-->" -}}
+  {{- range $cols }}
+    <div style="flex: 1;">
+      {{ . | markdownify }}
+    </div>
+  {{- end }}
+</div>

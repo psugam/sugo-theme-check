@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>White on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/white/</link>
+    <description>Recent content in White on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 04 Jun 2025 18:07:33 +0545</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/white/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multiple Column</title>
+      <link>http://localhost:1313/posts/multiple-column/</link>
+      <pubDate>Wed, 04 Jun 2025 18:07:33 +0545</pubDate>
+      <guid>http://localhost:1313/posts/multiple-column/</guid>
+      <description>&lt;div class=&#34;columns&#34; style=&#34;display: flex; gap: 1.5rem;&#34;&gt;&#xD;&#xA;    &lt;div style=&#34;flex: 1;&#34;&gt;&#xD;&#xA;      &lt;h3 id=&#34;column-1-content-in-markdown&#34;&gt;Column 1 content in Markdown&lt;/h3&gt;&#xA;&lt;p&gt;Quis nisi cupidatat ipsum sunt Lorem adipisicing ullamco enim consectetur irure. Nisi do elit aliqua esse occaecat. Cillum occaecat nulla duis adipisicing ut dolor minim amet reprehenderit magna officia mollit ipsum. Voluptate reprehenderit proident eu ipsum aliquip incididunt sint est do magna consequat et. Fugiat laboris ex exercitation ullamco officia voluptate.&lt;/p&gt;&#xA;&lt;p&gt;Culpa magna officia proident aute ex commodo minim veniam qui mollit. Ullamco voluptate aliqua nisi incididunt cillum. Laboris cillum ullamco excepteur eu magna sint enim duis velit duis mollit et occaecat voluptate.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

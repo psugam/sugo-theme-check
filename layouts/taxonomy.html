@@ -6,7 +6,7 @@
       {{ $tags := .Data.Terms.Alphabetical }}
       {{ range $i, $tag := $tags }}
         <span style="display:inline-block;margin:0 0 0.5rem 0;">
-          HAHA<a class="tag-link-animated" href="{{ $tag.Page.RelPermalink }}">{{ $tag.Page.Title }}</a>{{ if lt $i (sub (len $tags) 1) }}<span class="interpunct">·</span>{{ end }}
+          <a class="tag-link-animated" href="{{ $tag.Page.RelPermalink }}">{{ $tag.Page.Title }}</a>{{ if lt $i (sub (len $tags) 1) }}<span class="interpunct">·</span>{{ end }}
         </span>
       {{ end }}
     </divs>
