@@ -32,8 +32,6 @@ title = 'My New Hugo Site'
     extended = false
     min = '0.146.0'
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
 
 [outputFormats]
   [outputFormats.JSON]
@@ -47,3 +45,9 @@ title = 'My New Hugo Site'
     endLevel = 5
     ordered = false
     startLevel = 2
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
