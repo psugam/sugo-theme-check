@@ -94,19 +94,35 @@
   
   
     <div class="toc" id="toc-container">
-      <h2 id="toc-title">Table of Contents</h2>
+      <h2 id="toc-title" style="font: bold;">CONTENTS</h2>
       <nav id="TableOfContents">
   <ul>
     <li><a href="#spd">spd</a></li>
     <li><a href="#hello">hello</a></li>
     <li><a href="#what">what</a>
       <ul>
-        <li></li>
+        <li>
+          <ul>
+            <li><a href="#how">how</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
 </nav>
     </div>
+    <script>
+      
+      (function() {
+        var toc = document.getElementById('toc-container');
+        var title = document.getElementById('toc-title');
+        if (toc && title) {
+          title.addEventListener('click', function() {
+            toc.classList.toggle('collapsed');
+          });
+        }
+      })();
+    </script>
   
 
   <div id="post-content-wrapper">
@@ -138,7 +154,7 @@
       </div>
       <div style="flex:1; text-align:right;">
         
-          <a href="/posts/hello/">Next: Hello Post →</a>
+          <a href="/posts/hello-wassup/">Next: Hello Post →</a>
         
       </div>
     </div>

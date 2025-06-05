@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h1> All {{ .Title }}</h1>
   {{ .Content }}
   {{ range where .Pages "Section" "posts" }}
     <div style="margin-bottom: 2rem;">

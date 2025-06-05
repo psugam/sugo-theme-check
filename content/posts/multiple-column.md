@@ -3,8 +3,8 @@ date = '2025-06-04T18:07:33+05:45'
 draft = false
 title = 'Multiple Column'
 authors=['Sugam']
-tags=['red', 'white', 'blue']
-toc=true
+tags=['red', 'white', 'blue', 'sugam']
+toc=false
 +++
 {{< columns >}}
 ### Column 1 content in Markdown

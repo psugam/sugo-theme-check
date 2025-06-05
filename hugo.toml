@@ -42,3 +42,8 @@ title = 'My New Hugo Site'
     isPlainText = true
     notAlternative = true
     permalinkable = true
+[markup]
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 2

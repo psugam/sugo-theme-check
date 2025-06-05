@@ -36,11 +36,23 @@
       </span>
     </div>
   {{ end }}
-  {{ if .TableOfContents }}
+  {{ if and (.Params.toc) (.TableOfContents) }}
     <div class="toc" id="toc-container">
-      <h2 id="toc-title">Table of Contents</h2>
+      <h2 id="toc-title" style="font: bold;">CONTENTS</h2>
       {{ .TableOfContents }}
     </div>
+    <script>
+      // Collapsible TOC logic
+      (function() {
+        var toc = document.getElementById('toc-container');
+        var title = document.getElementById('toc-title');
+        if (toc && title) {
+          title.addEventListener('click', function() {
+            toc.classList.toggle('collapsed');
+          });
+        }
+      })();
+    </script>
   {{ end }}
 
   <div id="post-content-wrapper">

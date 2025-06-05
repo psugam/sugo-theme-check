@@ -127,4 +127,31 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.key === 'Escape') closeSearch();
     });
   }
+
+  // TOC COLLAPSIBLE SCRIPT
+  var toc = document.querySelector('.toc');
+  if (!toc) return;
+  // Restore collapsed state from localStorage
+  var tocCollapsed = localStorage.getItem('toc-collapsed') === 'true';
+  if (tocCollapsed) toc.classList.add('collapsed');
+  // Create toggle button if not present
+  if (!toc.querySelector('.toc-collapsible-toggle')) {
+    var h2 = toc.querySelector('h2') || toc.firstElementChild;
+    var tocToggleBtn = document.createElement('button');
+    tocToggleBtn.className = 'toc-collapsible-toggle';
+    tocToggleBtn.type = 'button';
+    tocToggleBtn.innerText = h2 ? h2.textContent : 'Table of Contents';
+    if (h2) h2.style.display = 'none';
+    toc.insertBefore(tocToggleBtn, toc.firstChild);
+  }
+  var toggleBtn = toc.querySelector('.toc-collapsible-toggle');
+  var tocList = toc.querySelector('ul');
+  if (tocList) {
+    tocList.classList.add('toc-list-collapsible');
+  }
+  toggleBtn.addEventListener('click', function() {
+    toc.classList.toggle('collapsed');
+    // Save collapsed state to localStorage
+    localStorage.setItem('toc-collapsed', toc.classList.contains('collapsed'));
+  });
 });

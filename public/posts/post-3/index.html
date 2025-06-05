@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Post 3 | My New Hugo Site</title>
 
-    <link rel="stylesheet" href="/css/main.css">
+      <link rel="stylesheet" href="/css/main.min.7f008250306effbf5458ec29ab99595cde9f10c5b62abebc8479adb459b32dab.css" integrity="sha256-fwCCUDBu/79UWOwpq5lZXN6fEMW2Kr68hHmttFmzLas=" crossorigin="anonymous">
 
 
-      <script src="/js/main.js"></script>
+        <script src="/js/main.3d07644dddeecc176000ce2d53667e3b75df620bc0105947185ab542b76978f7.js" integrity="sha256-PQdkTd3uzBdgAM4tU2Z&#43;O3XfYgvAEFlHGFq1QrdpePc=" crossorigin="anonymous"></script>
 
 
 </head>
@@ -94,19 +94,35 @@
   
   
     <div class="toc" id="toc-container">
-      <h2 id="toc-title">Table of Contents</h2>
+      <h2 id="toc-title" style="font: bold;">CONTENTS</h2>
       <nav id="TableOfContents">
   <ul>
     <li><a href="#spd">spd</a></li>
     <li><a href="#hello">hello</a></li>
     <li><a href="#what">what</a>
       <ul>
-        <li></li>
+        <li>
+          <ul>
+            <li><a href="#how">how</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
 </nav>
     </div>
+    <script>
+      
+      (function() {
+        var toc = document.getElementById('toc-container');
+        var title = document.getElementById('toc-title');
+        if (toc && title) {
+          title.addEventListener('click', function() {
+            toc.classList.toggle('collapsed');
+          });
+        }
+      })();
+    </script>
   
 
   <div id="post-content-wrapper">
