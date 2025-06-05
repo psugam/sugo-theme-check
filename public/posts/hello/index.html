@@ -73,8 +73,8 @@
       
       <time datetime="2023-03-15T11:00:00-07:00">March 15, 2023</time>
     </span>
-    <span>3 min read</span>
-    <span>462 words</span>
+    <span>4 min read</span>
+    <span>797 words</span>
   </div>
 
   
@@ -115,6 +115,74 @@
 <p>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.</p>
 <h2 id="spd">spd</h2>
 <h2 id="hello">hello</h2>
+<div class="custom-code-block-wrapper">
+  <pre class="custom-code-block"><code>
+{{- /*
+Renders a menu for the given menu ID.
+
+@context {page} page The current page.
+@context {string} menuID The menu ID.
+
+@example: {{ partial &amp;#34;menu.html&amp;#34; (dict &amp;#34;menuID&amp;#34; &amp;#34;main&amp;#34; &amp;#34;page&amp;#34; .) }}
+*/}}
+
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  &amp;lt;div id=&amp;#34;darkmode-toggle-container&amp;#34;&amp;gt;
+    &amp;lt;button id=&amp;#34;darkmode-toggle&amp;#34; aria-label=&amp;#34;Toggle dark mode&amp;#34;&amp;gt;
+      &amp;lt;span id=&amp;#34;darkmode-icon&amp;#34; style=&amp;#34;pointer-events:none;display:flex;align-items:center;&amp;#34;&amp;gt;
+        &amp;lt;!-- Sun icon for light mode (with rays), moon icon for dark mode; JS will toggle visibility --&amp;gt;
+        &amp;lt;svg id=&amp;#34;icon-sun&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; viewBox=&amp;#34;0 0 24 24&amp;#34; style=&amp;#34;display:inline;&amp;#34;&amp;gt;&amp;lt;circle cx=&amp;#34;12&amp;#34; cy=&amp;#34;12&amp;#34; r=&amp;#34;5&amp;#34;/&amp;gt;&amp;lt;g stroke=&amp;#34;currentColor&amp;#34; stroke-width=&amp;#34;2&amp;#34;&amp;gt;&amp;lt;line x1=&amp;#34;12&amp;#34; y1=&amp;#34;1&amp;#34; x2=&amp;#34;12&amp;#34; y2=&amp;#34;3&amp;#34;/&amp;gt;&amp;lt;line x1=&amp;#34;12&amp;#34; y1=&amp;#34;21&amp;#34; x2=&amp;#34;12&amp;#34; y2=&amp;#34;23&amp;#34;/&amp;gt;&amp;lt;line x1=&amp;#34;4.22&amp;#34; y1=&amp;#34;4.22&amp;#34; x2=&amp;#34;5.64&amp;#34; y2=&amp;#34;5.64&amp;#34;/&amp;gt;&amp;lt;line x1=&amp;#34;18.36&amp;#34; y1=&amp;#34;18.36&amp;#34; x2=&amp;#34;19.78&amp;#34; y2=&amp;#34;19.78&amp;#34;/&amp;gt;&amp;lt;line x1=&amp;#34;1&amp;#34; y1=&amp;#34;12&amp;#34; x2=&amp;#34;3&amp;#34; y2=&amp;#34;12&amp;#34;/&amp;gt;&amp;lt;line x1=&amp;#34;21&amp;#34; y1=&amp;#34;12&amp;#34; x2=&amp;#34;23&amp;#34; y2=&amp;#34;12&amp;#34;/&amp;gt;&amp;lt;line x1=&amp;#34;4.22&amp;#34; y1=&amp;#34;19.78&amp;#34; x2=&amp;#34;5.64&amp;#34; y2=&amp;#34;18.36&amp;#34;/&amp;gt;&amp;lt;line x1=&amp;#34;18.36&amp;#34; y1=&amp;#34;5.64&amp;#34; x2=&amp;#34;19.78&amp;#34; y2=&amp;#34;4.22&amp;#34;/&amp;gt;&amp;lt;/g&amp;gt;&amp;lt;/svg&amp;gt;
+        &amp;lt;svg id=&amp;#34;icon-moon&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; viewBox=&amp;#34;0 0 24 24&amp;#34; style=&amp;#34;display:none;&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M21 12.79A9 9 0 0111.21 3a7 7 0 100 14 9 9 0 009.79-4.21z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;
+      &amp;lt;/span&amp;gt;
+    &amp;lt;/button&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;nav class=&amp;#34;navbar&amp;#34; style=&amp;#34;display: flex; align-items: center; justify-content: center; gap: 1rem; position: relative;&amp;#34;&amp;gt;
+    &amp;lt;button id=&amp;#34;menu-toggle&amp;#34; aria-label=&amp;#34;Toggle menu&amp;#34;&amp;gt;&amp;amp;#9776;&amp;lt;/button&amp;gt;
+    &amp;lt;ul id=&amp;#34;main-menu&amp;#34; class=&amp;#34;hide-menu&amp;#34; style=&amp;#34;flex: 1 1 auto; gap: 0; justify-content: center; align-items: center; padding: 0; margin: 0; margin-bottom: 1rem;&amp;#34;&amp;gt;
+      {{- partial &amp;#34;inline/menu/walk.html&amp;#34; (dict &amp;#34;page&amp;#34; $page &amp;#34;menuEntries&amp;#34; .) }}
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/nav&amp;gt;
+{{- end }}
+
+{{- define &amp;#34;_partials/inline/menu/walk.html&amp;#34; }}
+  {{- $page := .page }}
+  {{- range .menuEntries }}
+    {{- $attrs := dict &amp;#34;href&amp;#34; .URL }}
+    {{- if $page.IsMenuCurrent .Menu . }}
+      {{- $attrs = merge $attrs (dict &amp;#34;class&amp;#34; &amp;#34;active&amp;#34; &amp;#34;aria-current&amp;#34; &amp;#34;page&amp;#34;) }}
+    {{- else if $page.HasMenuCurrent .Menu .}}
+      {{- $attrs = merge $attrs (dict &amp;#34;class&amp;#34; &amp;#34;ancestor&amp;#34; &amp;#34;aria-current&amp;#34; &amp;#34;true&amp;#34;) }}
+    {{- end }}
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+    &amp;lt;li&amp;gt;
+      &amp;lt;a
+        {{- range $k, $v := $attrs }}
+          {{- with $v }}
+            {{- printf &amp;#34; %s=%q&amp;#34; $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}}
+      &amp;gt;{{ $name }}&amp;lt;/a&amp;gt;
+      {{- with .Children }}
+        &amp;lt;ul&amp;gt;
+          {{- partial &amp;#34;inline/menu/walk.html&amp;#34; (dict &amp;#34;page&amp;#34; $page &amp;#34;menuEntries&amp;#34; .) }}
+        &amp;lt;/ul&amp;gt;
+      {{- end }}
+    &amp;lt;/li&amp;gt;
+  {{- end }}
+{{- end }}
+
+</code></pre>
+  <button class="copy-code-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText)">Copy</button>
+</div>
+
 <p><img src="bryce-canyon.jpg" alt="Bryce Canyon National Park"></p>
 <p>Sit excepteur do velit veniam mollit in nostrud laboris incididunt ea. Amet eu cillum ut reprehenderit culpa aliquip labore laborum amet sit sit duis. Laborum id proident nostrud dolore laborum reprehenderit quis mollit nulla amet veniam officia id id. Aliquip in deserunt qui magna duis qui pariatur officia sunt deserunt.</p>
 <p>Est exercitation commodo officia officia sit do sint non ea sint ut pariatur tempor. Commodo minim cupidatat esse occaecat enim. Amet qui reprehenderit id anim veniam tempor eiusmod dolor veniam. Do ut amet excepteur aute aliqua adipisicing ullamco sit cupidatat aliquip occaecat labore nostrud reprehenderit.</p>
